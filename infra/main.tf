@@ -8,8 +8,8 @@ terraform {
 }
 
 provider "google" {
-    credentials = file("clinical-analytics-dev-e1fef7af3102.json")
-    project = "clinical-analytics-dev"
-    region = "us-central1"
+    credentials = file(var.credentials_file)
+    project = var.project_id
+    region = var.region
 }
 
